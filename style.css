@@ -114,8 +114,7 @@ blockquote{
 } */
 
 .container-bg-gradient{
-  background: linear-gradient(to right bottom, rgba(255, 20, 145, 0.1),
-     rgba(30, 143, 255, 0.1));
+  background: linear-gradient(to right bottom, rgba(255, 20, 145, 0.1),rgba(30, 143, 255, 0.1));
 }
 
 h1,h2 {
