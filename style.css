@@ -11,6 +11,13 @@ blockquote{
     background: cover;
     /* opacity: 0.5; */
 }
+.btn:hover{
+  color: white;
+}
+.btn{
+  color: rgba(255, 200, 200, 1);
+  background: deeppink;
+}
   
 .avatar-container {
   display: flex;
@@ -97,3 +104,34 @@ blockquote{
   font-size: 0.9rem;
   margin-right: 1rem;
 }
+/* 
+.heading{
+  background: linear-gradient(to right, deeppink, dodgerblue) !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  font-weight: bold;
+} */
+
+.container-bg-gradient{
+  background: linear-gradient(to right bottom, rgba(255, 20, 145, 0.1),
+     rgba(30, 143, 255, 0.1));
+}
+
+h1,h2 {
+  background: linear-gradient(90deg, dodgerblue, deeppink);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   /* font-weight: bold; */
+}
+
+/* 
+  h1,h2 {
+    background: linear-gradient(to right, deeppink, dodgerblue) !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    font-weight: bold;
+  } */
+  
+
