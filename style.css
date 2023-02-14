@@ -124,6 +124,10 @@ h1,h2 {
    /* font-weight: bold; */
 }
 
+.btn-outline-light:hover{
+  color: deeppink;
+}
+
 /* 
   h1,h2 {
     background: linear-gradient(to right, deeppink, dodgerblue) !important;
