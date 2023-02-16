@@ -1,1 +1,716 @@
-<!DOCTYPE html><html lang="en"> <head> <meta charset="UTF-8"/> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <meta http-equiv="X-UA-Compatible" content="ie=edge"/> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/> <link rel="preconnect" href="https://fonts.googleapis.com"/> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/> <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet"/> <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Lato&display=swap" rel="stylesheet"/> <link rel="icon" type="image/x-icon" href="./assets/favioc.ico"/> <link rel="stylesheet" href="./style.css"/> <title>Unrequited Love Letters</title> <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script> <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-G17560ETG6" ></script> <script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag("js", new Date()); gtag("config", "G-G17560ETG6"); </script> </head> <body> <nav class="navbar shadow navbar-expand-lg navbar-dark fixed-top bg-primary" > <a class="navbar-brand" href="#" style="display: flex; flex-direction: row" > <span class="p-1" style=" display: inline-flex; flex-direction: column; justify-content: center; align-items: center; " > <span style=" font-family: 'Julius Sans One', sans-serif; font-size: 0.9rem; " > <img src="./assets/logo3.svg" width="30" height="30" style="fill: rgb(255, 30, 169)" class="brand-logo" alt="Your logo"/> UNREQUITED LOVE LETTERS </span> <span style=" font-family: 'Julius Sans One', sans-serif; margin-left: 2.25rem; font-size: 0.5rem; " >Pouring out my heart, even if it falls on deaf ears</span > </span> </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" > <span class="navbar-toggler-icon"></span> </button> <div class="collapse navbar-collapse" id="navbarNav"> <ul class="navbar-nav ml-5"> <li class="nav-item"> <a class="nav-link active" href="#">Home</a> </li><li class="nav-item"> <a class="nav-link" href="./privacy-policy.html">About</a> </li><li class="nav-item"> <a class="nav-link" href="./contact.html">Contact</a> </li><li class="nav-item"> <a class="nav-link" href="./sign-in-form.html">Login/Register</a> </li></ul> </div></nav> <div class="p-4"></div><div class="mt-5 container text-center alert alert-warning alert-dismissible fade show" role="alert" > This website is still under development. <button type="button" class="close" data-dismiss="alert" aria-label="Close" > <span aria-hidden="true">&times;</span> </button> </div><blockquote class="blockquote text-center m-5 blockquote-scroll"> <p class="mb-0">To My Love...</p><footer class="blockquote-footer"> From <span style="font-family: 'Julius Sans One', sans-serif">RJ</span> </footer> </blockquote> <div class="container"> <div class="row"> <div class="col-12 my-5"> <div class="col-12 mb-5"> <div class="card p-4 shadow custom-rounded" style="border-radius: 1rem" > <div class="card-body"> <div class="media"> <div class="avatar-container mr-4" style=" display: flex; justify-content: center; align-items: center; " > <div style=" width: 56px; height: 56px; animation: none !important; display: flex; justify-content: center; align-items: center; background-color: white; border-radius: 50%; " > <img src="https://source.unsplash.com/100x100?heart" style="animation: none" class="avatar rounded-circle"/> </div></div><div class="media-body"> <h5 class="mt-0">The Lonely Heart</h5> <p class="text-muted"> 16 Feb 2023 08:42 AM <span class="post-number" style="font-size: 0.7rem" >Post #6</span > </p></div></div><div class="card-text mt-3"> <p class="card-text">I humbly ask that you take a moment to enter your name and click the 'Open' button. it will lead you to where I share my actual message.</p><p class="card-text">By doing so, we can work towards resolving any misunderstandings.</p><p class="card-text ">After that, your life is your own and I will not disturb you.</p><p class="card-text ">I respect your choices in every way possible.</p><p class="card-text ">I assure you that I am asking this with the utmost sincerity and respect, and your cooperation would mean the world to me</p><div class="p-4 my-2 rounded shadow" style="background: linear-gradient(to bottom, rgba(255, 30, 124, 1), rgb(45, 66, 255));"> <p class="text-small text-light pb-2">Enter Your Facebook name without surname like (rohan gupta) </p><div class="mb-3" style="display: flex; flex-direction: row"> <input type="text" class="mr-2 form-control postInput" id="post6Input" placeholder="Enter Your Name"/> <button class="btn btn-outline-light postbtn" id="post6btn">Open</button> </div><p class="text-small text-light pb-2">Note: You don't need to follow a specific casing when entering text. You may enter letters in uppercase or lowercase, or mix the cases as you prefer</p><div> <p class="alert alert-info postTries" id="post6Tries"></p><p class="alert alert-danger postFailures" id="post6Failures"></p><p class="alert alert-success postSuccesses id="post6Successes"></p></div></div></div><p class="text-muted">0 Likes</p><p class="text-muted">0 Comments</p><div class="card-footer rounded"> <p class="text-muted"> Note: "This post is not meant for everyone, it is only intended for one person." </p></div></div></div></div><div class="card p-1 shadow custom-rounded" style="border-radius: 1rem" > <div class="card-body"> <div class="media"> <div class="avatar-container mr-4" style=" display: flex; justify-content: center; align-items: center; " > <div style=" width: 56px; height: 56px; animation: none !important; display: flex; justify-content: center; align-items: center; background-color: white; border-radius: 50%; " > <img src="./assets/profile_pics/post_4.jpg" style="animation: none" class="avatar rounded-circle" alt="avatar"/> </div></div><div class="media-body"> <h5 class="mt-0">The LoveLorn</h5> <p class="text-muted"> 15 Feb 2023 2:19 PM <span class="post-number" style="font-size: 0.7rem" >Post #5</span > </p></div></div><div class="card-text mt-3"> <img src="./assets/post_pics/post_5.jpg" alt="valentine" style="opacity: 1" class="mb-3 mx-2 img-fluid"/> <p class='card-text'>Today, I realized once again that I was a big fool. You didn't check my Facebook profile. I have been apologizing since January 6th, and I'm sorry for it over and over again. I changed my profile pictures to sad ones and my cover photo to say sorry. I thought you saw everything because I sensed something, but not everything is true.</p><p class='card-text mb-3'>I don't know what I did wrong. I was just expressing my love for you, but I failed to do it properly. All these days, I thought you were going to accept my apology and understand me soon, but you didn't even consider me. It hurts me so bad. But I still have hope that I'll meet you soon, and I hope you'll be there for me.</p></div <p class="text-muted mt-3">0 Likes</p><p class="text-muted">0 Comments</p><div class="card-footer rounded"> <p class="text-muted"> Note: "This post is not meant for everyone, it is only intended for one person." </p></div></div></div></div><div class="col-12 my-5"> <div class="card p-1 shadow custom-rounded" style="border-radius: 1rem" > <div class="card-body"> <div class="media"> <div class="avatar-container mr-4" style=" display: flex; justify-content: center; align-items: center; " > <div style=" width: 56px; height: 56px; animation: none !important; display: flex; justify-content: center; align-items: center; background-color: white; border-radius: 50%; " > <img src="./assets/profile_pics/post_4.jpg" style="animation: none" class="avatar rounded-circle" alt="avatar"/> </div></div><div class="media-body"> <h5 class="mt-0">The LoveLorn</h5> <p class="text-muted"> 15 Feb 2023 06:34 AM <span class="post-number" style="font-size: 0.7rem" >Post #4</span > </p></div></div><div class="card-text mt-3"> <img src="./assets/post_pics/post_4.jpg" alt="valentine" style="opacity: 1" class="mb-3 mx-2 img-fluid"/> <p class="card-text">I thought for the last 41 days (6th Jan to 14 Feb) that you were looking at my Facebook profile and seeing my bio where I express something. Whenever you change your profile picture, I change mine and also express something by adding a message in my bio as well as my Facebook cover page.</p><p class="card-text">I don't know whether you're looking at my Facebook, which is why I created a link to this website and added it to my Facebook bio. Not even a single person has visited this website, and I haven't added any meta information for search engines like Google because it was built only for you to share my thoughts. I hope you will visit soon.</p><p class="card-text">You haven't even clicked the link in my Facebook bio, which indicates that you're not checking out my Facebook. All these days, I've been blindly believing that you saw everything, but you haven't.</p><p class="card-text">I am looking forward to meeting you soon and hearing your thoughts, even if they may not be what I am hoping for. I believe that we can have an honest conversation and work towards resolving any misunderstandings so that we can become good friends.</p></div><p class="text-muted mt-3">0 Likes</p><p class="text-muted">0 Comments</p><div class="card-footer rounded"> <p class="text-muted"> Note: "This post is not meant for everyone, it is only intended for one person." </p></div></div></div></div><div class="col-12 mb-5"> <div class="card p-1 shadow custom-rounded" style="border-radius: 1rem" > <div class="card-body"> <div class="media"> <div class="avatar-container mr-4" style=" display: flex; justify-content: center; align-items: center; " > <div style=" width: 56px; height: 56px; animation: none !important; display: flex; justify-content: center; align-items: center; background-color: white; border-radius: 50%; " > <img src="https://source.unsplash.com/100x100?heart" style="animation: none" class="avatar rounded-circle"/> </div></div><div class="media-body"> <h5 class="mt-0">The Lonely Heart</h5> <p class="text-muted"> 14 Feb 2023 08:06 AM <span class="post-number" style="font-size: 0.7rem" >Post #3</span > </p></div></div><div class="card-text mt-3"> <img src="./assets/bangaram.png" alt="valentine" style="opacity: 1" class="mb-3 mx-2 img-fluid"/> <p>My dearest love,</p><p></p><p> As Valentine's Day approaches, I find myself lost for words. I am overwhelmed by the depth of my feelings for you and I am at a loss for how to express them. I know that on this special day, people all over the world are expressing their love to their loved ones, and I want to do the same. </p><p></p><p> I know that I am not by your side to celebrate this day with you, but please know that my love for you transcends time and distance. I am working tirelessly towards my life goals, so that one day, I can be there for you and make you the happiest person in the world. </p><p></p><p> I know that you may not be ready to listen to my words right now, but deep in your heart, I am confident that you will soon feel the love that I have for you. I am patient, and I am willing to wait for you until the day that you are ready to accept my love. </p><p></p><p> Until then, please know that you are always on my mind and in my heart. I hope and pray that we will be together soon, so that we can share our love on Valentine's Day and every day like it's Valentine's Day. Actually, the day I saw you is my special day. </p><p>Yours always</p></div><p class="text-muted">0 Likes</p><p class="text-muted">0 Comments</p><div class="card-footer rounded"> <p class="text-muted"> Note: "This post is not meant for everyone, it is only intended for one person." </p></div></div></div></div><div class="col-12"> <div class="card p-4 shadow custom-rounded" style="border-radius: 1rem" > <div class="card-body"> <div class="media"> <div class="avatar-container mr-4" style=" display: flex; justify-content: center; align-items: center; " > <div style=" width: 56px; height: 56px; animation: none !important; display: flex; justify-content: center; align-items: center; background-color: white; border-radius: 50%; " > <img src="https://source.unsplash.com/100x100?heart" style="animation: none" class="avatar rounded-circle"/> </div></div><div class="media-body"> <h5 class="mt-0">The Lonely Heart</h5> <p class="text-muted"> 14 Feb 2023 02:17 AM <span class="post-number" style="font-size: 0.7rem" >Post #2</span > </p></div></div><div class="card-text mt-3"> <p> Open this link in your browser by typing the following URL: </p><p></p><p> <span class="font-weight-bold text-primary" >bit.ly/[your name] </span >, all in lowercase letters. </p><p></p><p> For example: For the name Rohan Gupta, you would enter <span class="text-primary font-weight-bold" >bit.ly/rohangupta</span > </p><p> Once you enter the URL with your name, it will lead you to where I share my actual message. </p><div class="p-4 my-2 rounded shadow" style="background: linear-gradient(to bottom, rgba(255, 30, 124, 1), rgb(45, 66, 255));"> <p class="text-small text-light"> You can also enter your name below instead of opening it in your browser, and click the open button. </p><div class="mb-3" style="display: flex; flex-direction: row"> <input type="text" class="mr-2 form-control postInput" id="post2Input" placeholder="Enter Your Name"/> <button class="btn btn-outline-light postbtn" id="post2btn">Open</button> </div><p class="text-small text-light pb-2">Note: You don't need to follow a specific casing when entering text. You may enter letters in uppercase or lowercase, or mix the cases as you prefer</p><div> <p class="alert alert-info postTries" id="post2Tries"></p><p class="alert alert-danger postFailures" id="post2Failures"></p><p class="alert alert-success postSuccesses" id="post2Successes"></p></div></div></div><p class="text-muted">0 Likes</p><p class="text-muted">0 Comments</p><div class="card-footer rounded"> <p class="text-muted"> Note: "This post is not meant for everyone, it is only intended for one person." </p></div></div></div></div><div class="col-12 my-5"> <div class="card p-4 shadow custom-rounded" style="border-radius: 1rem" > <div class="card-body"> <div class="media"> <div class="avatar-container mr-4" style=" display: flex; justify-content: center; align-items: center; " > <div style=" width: 56px; height: 56px; animation: none !important; display: flex; justify-content: center; align-items: center; background-color: white; border-radius: 50%; " > <img src="https://source.unsplash.com/100x100?romantic" style="animation: none" class="avatar rounded-circle"/> </div></div><div class="media-body"> <h5 class="mt-0">The Enamored</h5> <p class="text-muted"> 14 Feb 2023 12:01 AM <span class="post-number" style="font-size: 0.7rem" >Post #1</span > </p></div></div><div class="card-text my-3"> <p>I've created this small website just for you.</p><p> I struggle to express my feelings and thoughts towards you, but the more I think about you, the stronger my love grows. </p><p> I can't stop thinking about you. <br/> I understand that you may not be ready to read my messages yet, <br/> but it is my responsibility to express myself in a proper way. <br/> </p><p> <em>If I have made any mistakes, I apologize sincerely.</em> </p><p>I hope you will read every post that I post here.</p><p> Once you respond to me, I will be eagerly waiting for that day." </p></div><p class="text-muted">0 Likes</p><p class="text-muted">0 Comments</p><div class="card-footer rounded"> <p class="text-muted"> Note: "This post is not meant for everyone, it is only intended for one person." </p></div></div></div></div></div></div><footer class="bg-dark"> <div class="container pt-3"><!-- <div class="d-flex justify-content-center"> <ul class="list-unstyled d-flex mx-auto"> <li class="mr-3"> <a href="#">Home</a> </li><li class="mr-3"> <a href="#">About</a> </li><li class="mr-3"> <a href="#">Contact</a> </li></ul> </div>--> <div class="d-flex justify-content-center"> <p class="text-muted">All rights reserved &copy; 2023</p></div></div></footer> <script>document .querySelector(".blockquote-scroll") .addEventListener("mouseover", function (){this.style.animation="scroll-left 3s linear";}); document .querySelector(".blockquote-scroll") .addEventListener("mouseout", function (){this.style.animation="";}); </script> <script src="./script.js"></script> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="./assets/favioc.ico" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>Unrequited Love Letters</title>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-G17560ETG6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-G17560ETG6");
+    </script>
+  </head>
+  <body>
+    <nav
+      class="navbar shadow navbar-expand-lg navbar-dark fixed-top bg-primary"
+    >
+      <a
+        class="navbar-brand"
+        href="#"
+        style="display: flex; flex-direction: row"
+      >
+        <span
+          class="p-1"
+          style="
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <span
+            style="
+              font-family: 'Julius Sans One', sans-serif;
+              font-size: 0.9rem;
+            "
+          >
+            <img
+              src="./assets/logo3.svg"
+              width="30"
+              height="30"
+              style="fill: rgb(255, 30, 169)"
+              class="brand-logo"
+              alt="Your logo"
+            />
+            UNREQUITED LOVE LETTERS
+          </span>
+          <span
+            style="
+              font-family: 'Julius Sans One', sans-serif;
+              margin-left: 2.25rem;
+              font-size: 0.5rem;
+            "
+            >Pouring out my heart, even if it falls on deaf ears</span
+          >
+        </span>
+        <!-- <img src="./assets/logo.png.png" style="background-blend-mode: screen;" height="80rem" alt=""> -->
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-5">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a href="./privacy-policy.html">About</a> -->
+            <a class="nav-link" href="./privacy-policy.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./sign-in-form.html">Login/Register</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="p-4"></div>
+    <div
+      class="mt-5 container text-center alert alert-warning alert-dismissible fade show"
+      role="alert"
+    >
+      This website is still under development.
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <blockquote class="blockquote text-center m-5 blockquote-scroll">
+      <p class="mb-0">To My Love...</p>
+      <footer class="blockquote-footer">
+        From
+        <span style="font-family: 'Julius Sans One', sans-serif">RJ</span>
+      </footer>
+    </blockquote>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 my-5">
+          <div class="col-12 mb-5">
+            <div
+              class="card p-4 shadow custom-rounded"
+              style="border-radius: 1rem"
+            >
+              <div class="card-body">
+                <!-- <p class="post-number ml-auto shadow">Post #1</p> -->
+                <div class="media">
+                  <div
+                    class="avatar-container mr-4"
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 56px;
+                        height: 56px;
+                        animation: none !important;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: white;
+                        border-radius: 50%;
+                      "
+                    >
+                      <img
+                        src="https://source.unsplash.com/100x100?heart"
+                        style="animation: none"
+                        class="avatar rounded-circle"
+                      />
+                    </div>
+                  </div>
+                  <div class="media-body">
+                    <h5 class="mt-0">The Lonely Heart</h5>
+                    <p class="text-muted">
+                      16 Feb 2023 08:42 AM
+                      <span class="post-number" style="font-size: 0.7rem"
+                        >Post #6</span
+                      >
+                    </p>
+                  </div>
+                </div>
+  
+                <div class="card-text mt-3">
+                  <p class="card-text">I humbly ask that you take a moment 
+                    to enter your name and click the 'Open' button. it will lead you to
+                    where I share my actual message.</p>
+                  <p class="card-text">By doing so, we can work towards resolving any misunderstandings.</p>
+                  <p class="card-text ">After that, your life is your own and I will not disturb you.</p>
+                  <p class="card-text ">I respect your choices in every way possible.</p>
+                  <p class="card-text ">I assure you that I am asking this with the utmost sincerity and respect, and your cooperation would mean the world to me</p>
+                                   <div class="p-4 my-2 rounded shadow" style="background: linear-gradient(to bottom, 
+                  rgba(255, 30, 124, 1), rgb(45, 66, 255));">
+                    
+                    <p class="text-small text-light pb-2">Enter Your Facebook name without surname like (rohan gupta) </p>
+                    <div class="mb-3" style="display: flex; flex-direction: row">
+                      <input
+                      type="text"
+                      class="mr-2 form-control postInput"
+                      id="post6Input"
+                      placeholder="Enter Your Name"
+                      />
+                      <button class="btn btn-outline-light postbtn" id="post6btn">Open</button>
+                    </div>
+                    <p class="text-small text-light pb-2">Note: You don't need to follow a specific casing when entering text. You may enter letters in uppercase or lowercase, or mix the cases as you prefer</p>
+                    <div>
+                      <p class="alert alert-info postTries" id="post6Tries"></p>
+                      <p class="alert alert-danger postFailures" id="post6Failures"></p>
+                      <p class="alert alert-success postSuccesses id="post6Successes"></p>
+                    </div>
+                  </div>
+                </div>
+  
+                <p class="text-muted">0 Likes</p>
+                <p class="text-muted">0 Comments</p>
+                <div class="card-footer rounded">
+                  <p class="text-muted">
+                    Note: "This post is not meant for everyone, it is only
+                    intended for one person."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card p-1 shadow custom-rounded"
+            style="border-radius: 1rem"
+          >
+            <div class="card-body">
+              <!-- <p class="post-number ml-auto shadow">Post #1</p> -->
+              <div class="media">
+                <div
+                  class="avatar-container mr-4"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <div
+                    style="
+                      width: 56px;
+                      height: 56px;
+                      animation: none !important;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      background-color: white;
+                      border-radius: 50%;
+                    "
+                  >
+                    <img
+                      src="./assets/profile_pics/post_4.jpg"
+                      style="animation: none"
+                      class="avatar rounded-circle"
+                      alt="avatar"
+                    />
+                  </div>
+                </div>
+                <div class="media-body">
+                  <h5 class="mt-0">The LoveLorn</h5>
+                  <p class="text-muted">
+                    15 Feb 2023 2:19 PM
+                    <span class="post-number" style="font-size: 0.7rem"
+                      >Post #5</span
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-text mt-3">
+                <img
+                  src="./assets/post_pics/post_5.jpg"
+                  alt="valentine"
+                  style="opacity: 1"
+                  class="mb-3 mx-2 img-fluid"
+                />
+                <p class='card-text'>Today, I realized once again that I was a big fool. You didn't check my Facebook profile. I have been apologizing since January 6th, and I'm sorry for it over and over again. I changed my profile pictures to sad ones and my cover photo to say sorry. I thought you saw everything because I sensed something, but not everything is true.</p>
+                <p class='card-text mb-3'>I don't know what I did wrong. I was just expressing my love for you, but I failed to do it properly. All these days, I thought you were going to accept my apology and understand me soon, but you didn't even consider me. It hurts me so bad. But I still have hope that I'll meet you soon, and I hope you'll be there for me.</p>
+              </div
+
+              <p class="text-muted mt-3">0 Likes</p>
+              <p class="text-muted">0 Comments</p>
+              <div class="card-footer rounded">
+                <p class="text-muted">
+                  Note: "This post is not meant for everyone, it is only
+                  intended for one person."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 my-5">
+          <div
+            class="card p-1 shadow custom-rounded"
+            style="border-radius: 1rem"
+          >
+            <div class="card-body">
+              <!-- <p class="post-number ml-auto shadow">Post #1</p> -->
+              <div class="media">
+                <div
+                  class="avatar-container mr-4"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <div
+                    style="
+                      width: 56px;
+                      height: 56px;
+                      animation: none !important;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      background-color: white;
+                      border-radius: 50%;
+                    "
+                  >
+                    <img
+                      src="./assets/profile_pics/post_4.jpg"
+                      style="animation: none"
+                      class="avatar rounded-circle"
+                      alt="avatar"
+                    />
+                  </div>
+                </div>
+                <div class="media-body">
+                  <h5 class="mt-0">The LoveLorn</h5>
+                  <p class="text-muted">
+                    15 Feb 2023 06:34 AM
+                    <span class="post-number" style="font-size: 0.7rem"
+                      >Post #4</span
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-text mt-3">
+                <img
+                  src="./assets/post_pics/post_4.jpg"
+                  alt="valentine"
+                  style="opacity: 1"
+                  class="mb-3 mx-2 img-fluid"
+                />
+                <p class="card-text">I thought for the last 41 days (6th Jan to 14 Feb) 
+                  that you were looking at my Facebook profile and seeing my bio where I express something.
+                 Whenever you change your profile picture, I change mine and also express something by adding a message in my bio as well as my Facebook cover page.</p>
+                <p class="card-text">I don't know whether you're looking at my Facebook, which is why I created a link to this website and added it to my Facebook bio. Not even a single person has visited this website, and I haven't added any meta information for search engines like Google because it was built only for you to share my thoughts. I hope you will visit soon.</p>
+                <p class="card-text">You haven't even clicked the link in my Facebook bio, which indicates that you're not checking out my Facebook. All these days, I've been blindly believing that you saw everything, but you haven't.</p>
+                <p class="card-text">I am looking forward to meeting you soon and hearing your thoughts, even if they may not be what I am hoping for. I believe that we can have an honest conversation and work towards resolving any misunderstandings so that we can become good friends.</p>
+                
+              </div>
+
+              <p class="text-muted mt-3">0 Likes</p>
+              <p class="text-muted">0 Comments</p>
+              <div class="card-footer rounded">
+                <p class="text-muted">
+                  Note: "This post is not meant for everyone, it is only
+                  intended for one person."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mb-5">
+          <div
+            class="card p-1 shadow custom-rounded"
+            style="border-radius: 1rem"
+          >
+            <div class="card-body">
+              <!-- <p class="post-number ml-auto shadow">Post #1</p> -->
+              <div class="media">
+                <div
+                  class="avatar-container mr-4"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <div
+                    style="
+                      width: 56px;
+                      height: 56px;
+                      animation: none !important;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      background-color: white;
+                      border-radius: 50%;
+                    "
+                  >
+                    <img
+                      src="https://source.unsplash.com/100x100?heart"
+                      style="animation: none"
+                      class="avatar rounded-circle"
+                    />
+                  </div>
+                </div>
+                <div class="media-body">
+                  <h5 class="mt-0">The Lonely Heart</h5>
+                  <p class="text-muted">
+                    14 Feb 2023 08:06 AM
+                    <span class="post-number" style="font-size: 0.7rem"
+                      >Post #3</span
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-text mt-3">
+                <img
+                  src="./assets/bangaram.png"
+                  alt="valentine"
+                  style="opacity: 1"
+                  class="mb-3 mx-2 img-fluid"
+                />
+                <p>My dearest love,</p>
+                <p></p>
+
+                <p>
+                  As Valentine's Day approaches, I find myself lost for words. I
+                  am overwhelmed by the depth of my feelings for you and I am at
+                  a loss for how to express them. I know that on this special
+                  day, people all over the world are expressing their love to
+                  their loved ones, and I want to do the same.
+                </p>
+                <p></p>
+
+                <p>
+                  I know that I am not by your side to celebrate this day with
+                  you, but please know that my love for you transcends time and
+                  distance. I am working tirelessly towards my life goals, so
+                  that one day, I can be there for you and make you the happiest
+                  person in the world.
+                </p>
+                <p></p>
+
+                <p>
+                  I know that you may not be ready to listen to my words right
+                  now, but deep in your heart, I am confident that you will soon
+                  feel the love that I have for you. I am patient, and I am
+                  willing to wait for you until the day that you are ready to
+                  accept my love.
+                </p>
+                <p></p>
+
+                <p>
+                  Until then, please know that you are always on my mind and in
+                  my heart. I hope and pray that we will be together soon, so
+                  that we can share our love on Valentine's Day and every day
+                  like it's Valentine's Day. Actually, the day I saw you is my
+                  special day.
+                </p>
+
+                <p>Yours always</p>
+                
+              </div>
+
+              <p class="text-muted">0 Likes</p>
+              <p class="text-muted">0 Comments</p>
+              <div class="card-footer rounded">
+                <p class="text-muted">
+                  Note: "This post is not meant for everyone, it is only
+                  intended for one person."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div
+            class="card p-4 shadow custom-rounded"
+            style="border-radius: 1rem"
+          >
+            <div class="card-body">
+              <!-- <p class="post-number ml-auto shadow">Post #1</p> -->
+              <div class="media">
+                <div
+                  class="avatar-container mr-4"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <div
+                    style="
+                      width: 56px;
+                      height: 56px;
+                      animation: none !important;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      background-color: white;
+                      border-radius: 50%;
+                    "
+                  >
+                    <img
+                      src="https://source.unsplash.com/100x100?heart"
+                      style="animation: none"
+                      class="avatar rounded-circle"
+                    />
+                  </div>
+                </div>
+                <div class="media-body">
+                  <h5 class="mt-0">The Lonely Heart</h5>
+                  <p class="text-muted">
+                    14 Feb 2023 02:17 AM
+                    <span class="post-number" style="font-size: 0.7rem"
+                      >Post #2</span
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-text mt-3">
+                <p>
+                  Open this link in your browser by typing the following URL:
+                </p>
+                <p></p>
+
+                <p>
+                  <span class="font-weight-bold text-primary"
+                    >bit.ly/[your name] </span
+                  >, all in lowercase letters.
+                </p>
+                <p></p>
+
+                <p>
+                  For example: For the name Rohan Gupta, you would enter
+                  <span class="text-primary font-weight-bold"
+                    >bit.ly/rohangupta</span
+                  >
+                </p>
+                <p>
+                  Once you enter the URL with your name, it will lead you to
+                  where I share my actual message.
+                </p>
+
+                <div class="p-4 my-2 rounded shadow" style="background: linear-gradient(to bottom, 
+                rgba(255, 30, 124, 1), rgb(45, 66, 255));">
+                  
+                  <p class="text-small text-light">
+                    You can also enter your name below instead of opening it in
+                    your browser, and click the open button.
+                  </p>
+                  <div class="mb-3" style="display: flex; flex-direction: row">
+                    <input
+                    type="text"
+                    class="mr-2 form-control postInput"
+                    id="post2Input"
+                    placeholder="Enter Your Name"
+                    />
+                    <button class="btn btn-outline-light postbtn" id="post2btn">Open</button>
+                  </div>
+                  <p class="text-small text-light pb-2">Note: You don't need to follow a specific casing when entering text. You may enter letters in uppercase or lowercase, or mix the cases as you prefer</p>
+                  <div>
+                    <p class="alert alert-info postTries" id="post2Tries"></p>
+                    <p class="alert alert-danger postFailures" id="post2Failures"></p>
+                    <p class="alert alert-success postSuccesses" id="post2Successes"></p>
+                  </div>
+                </div>
+              </div>
+
+              <p class="text-muted">0 Likes</p>
+              <p class="text-muted">0 Comments</p>
+              <div class="card-footer rounded">
+                <p class="text-muted">
+                  Note: "This post is not meant for everyone, it is only
+                  intended for one person."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 my-5">
+          <div
+            class="card p-4 shadow custom-rounded"
+            style="border-radius: 1rem"
+          >
+            <div class="card-body">
+              <!-- <p class="post-number ml-auto shadow">Post #1</p> -->
+              <div class="media">
+                <div
+                  class="avatar-container mr-4"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <div
+                    style="
+                      width: 56px;
+                      height: 56px;
+                      animation: none !important;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      background-color: white;
+                      border-radius: 50%;
+                    "
+                  >
+                    <img
+                      src="https://source.unsplash.com/100x100?romantic"
+                      style="animation: none"
+                      class="avatar rounded-circle"
+                    />
+                  </div>
+                </div>
+                <div class="media-body">
+                  <h5 class="mt-0">The Enamored</h5>
+                  <p class="text-muted">
+                    14 Feb 2023 12:01 AM
+                    <span class="post-number" style="font-size: 0.7rem"
+                      >Post #1</span
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-text my-3">
+                <p>I've created this small website just for you.</p>
+                <p>
+                  I struggle to express my feelings and thoughts towards you,
+                  but the more I think about you, the stronger my love grows.
+                </p>
+                <p>
+                  I can't stop thinking about you. <br />
+                  I understand that you may not be ready to read my messages
+                  yet, <br />
+                  but it is my responsibility to express myself in a proper way.
+                  <br />
+                </p>
+
+                <p>
+                  <em>If I have made any mistakes, I apologize sincerely.</em>
+                </p>
+
+                <p>I hope you will read every post that I post here.</p>
+
+                <p>
+                  Once you respond to me, I will be eagerly waiting for that
+                  day."
+                </p>
+              </div>
+              <p class="text-muted">0 Likes</p>
+              <p class="text-muted">0 Comments</p>
+              <div class="card-footer rounded">
+                <p class="text-muted">
+                  Note: "This post is not meant for everyone, it is only
+                  intended for one person."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark">
+      <div class="container pt-3">
+        <!-- <div class="d-flex justify-content-center">
+          <ul class="list-unstyled d-flex mx-auto">
+            <li class="mr-3">
+              <a href="#">Home</a>
+            </li>
+            <li class="mr-3">
+              <a href="#">About</a>
+            </li>
+            <li class="mr-3">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div> -->
+        <div class="d-flex justify-content-center">
+          <p class="text-muted">All rights reserved &copy; 2023</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .querySelector(".blockquote-scroll")
+        .addEventListener("mouseover", function () {
+          this.style.animation = "scroll-left 3s linear";
+        });
+      document
+        .querySelector(".blockquote-scroll")
+        .addEventListener("mouseout", function () {
+          this.style.animation = "";
+        });
+    </script>
+    <script src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
